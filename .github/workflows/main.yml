@@ -28,4 +28,3 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "enigmatic-anchorage-44262" #Must be unique in Heroku
           heroku_email: "andrewjarvis@outlook.com"
-          usedocker: true
