@@ -27,4 +27,5 @@ app.get("/", (req, res) => {
 
 app.listen(port, () => {
    console.log(`App Started on Port ${port}`);
+   console.log("Adding this as debugging I guess");
 });
