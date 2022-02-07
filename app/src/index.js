@@ -1,7 +1,7 @@
 import express from "express";
 import crypto from "crypto";
 const app = express();
-const port = 3000;
+const port = process.env.PORT | 3000;
 
 app.use(express.json());
 
@@ -19,6 +19,10 @@ app.post("/hash", (req, res) => {
          res.send(derivedKey.toString("hex"));
       }
    );
+});
+
+app.get("/", (req, res) => {
+   res.send("GET request received");
 });
 
 app.listen(port, () => {

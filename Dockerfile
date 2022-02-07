@@ -1,14 +1,13 @@
-FROM a;pine:latest
+FROM alpine:latest
 ENV REFRESHED_AT 2022-02-06
+ARG PORT=3000
 
-RUN apk add --update yarn0
-RUN yarn install
+RUN apk add --update yarn
 
-ADD . /app
+ADD app /app
 
 WORKDIR /app
 
+EXPOSE $PORT/udp
+EXPOSE $PORT/tcp
 CMD ["yarn", "start"]
-
-EXPOSE 3000/udp
-EXPOSE 3000/tcp

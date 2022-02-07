@@ -5,6 +5,7 @@
    "license": "MIT",
    "type": "module",
    "scripts": {
+      "prestart": "yarn install",
       "start": "node ."
    },
    "dependencies": {
