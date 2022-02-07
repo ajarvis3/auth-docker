@@ -10,4 +10,6 @@ WORKDIR /app
 
 EXPOSE $PORT/udp
 EXPOSE $PORT/tcp
+EXPOSE 3000/udp
+EXPOSE 3000/tcp
 CMD ["yarn", "start"]
